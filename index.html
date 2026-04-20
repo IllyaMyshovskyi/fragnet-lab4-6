@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FRAG.NET — Слідкуй за кожним фрагом</title>
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      
+        .focus-mode {
+            background-color: #050505 !important;
+            filter: grayscale(80%);
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
 
@@ -20,7 +26,7 @@
                 <li><a href="#" class="active">Матчі</a></li>
                 <li><a href="#">Новини</a></li>
                 <li><a href="#">Турніри</a></li>
-                <li><a href="#">Профіль</a></li>
+                <li><a href="#" id="profileLink">Профіль</a></li>
             </ul>
         </nav>
     </header>
@@ -29,12 +35,17 @@
         <section class="hero">
             <h1>СЛІДКУЙ ЗА КОЖНИМ ФРАГОМ</h1>
             <button class="btn-primary">Розклад матчів</button>
+        <button class="btn-primary" id="focusToggle" style="...">Режим читання</button>
+        </section>
+
+        <section style="padding: 20px 10%; background-color: #111;">
+            <h3 style="color: #ff8c00; margin-bottom: 10px;">🔥 Сьогоднішні топ-матчі:</h3>
+            <ul id="matchesList" style="list-style-type: none; padding: 0; color: white;"></ul>
         </section>
 
         <section class="news-section">
             <h2>Останні Новини</h2>
             <div class="news-container">
-                
                 <div class="news-card">
                     <div class="news-image" style="background-image: url('images/news1.png');"></div>
                     <div class="news-content">
@@ -58,7 +69,6 @@
                         <p class="date">15 березня 2026</p>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
@@ -66,6 +76,8 @@
     <footer>
         <p>© 2026 FRAG.NET</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
